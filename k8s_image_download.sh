@@ -42,7 +42,7 @@ for imageName in ${image_list[@]};
 do
         imageShortName=`echo ${imageName} | awk -F ":" '{print $1}'|awk -F "/" '{print $N}'`
         imageShortName_ver=`echo ${imageName} | awk -F "/" '{print $N}'`
-        dir=`echo ${imageName} | awk -F ":" '{print $1}'|awk -F "/" '{print $2}'`
+        dir=`echo ${imageName} | awk -F ":" '{print $1}'|awk -F "/" '{print $N}'`
         mkdir -p ${dir}
         cat <<EOF > ${dir}/Dockerfile
 FROM ${imageName}
