@@ -20,19 +20,19 @@ GCR_URL=gcr.io
 
 
 image_list=(\
-${GCR_URL}/kube-apiserver-${ARCH}:${KUBE_VERSION}
-${GCR_URL}/kube-controller-manager-${ARCH}:${KUBE_VERSION}
-${GCR_URL}/kube-scheduler-${ARCH}:${KUBE_VERSION}
-${GCR_URL}/kube-proxy-${ARCH}:${KUBE_VERSION}
-${GCR_URL}/etcd-${ARCH}:${ETCD_VERSION}
-${GCR_URL}/pause-${ARCH}:${KUBE_PAUSE_VERSION}
-${GCR_URL}/k8s-dns-sidecar-${ARCH}:${DNS_VERSION}
-${GCR_URL}/k8s-dns-kube-dns-${ARCH}:${DNS_VERSION}
-${GCR_URL}/k8s-dns-dnsmasq-nanny-${ARCH}:${DNS_VERSION}
-${GCR_URL}/kubernetes-dashboard-${ARCH}:${DASHBOARD_VERSION}
-${GCR_URL}/heapster-grafana-${ARCH}:${GRAFANA_VERSION}
-${GCR_URL}/heapster-${ARCH}:${HEAPSTER_VERSION}
-${GCR_URL}/heapster-influxdb-${ARCH}:${INFLUXDB_VERSION}
+${GCR_URL}/google-containers/kube-apiserver-${ARCH}:${KUBE_VERSION}
+${GCR_URL}/google-containers/kube-controller-manager-${ARCH}:${KUBE_VERSION}
+${GCR_URL}/google-containers/kube-scheduler-${ARCH}:${KUBE_VERSION}
+${GCR_URL}/google-containers/kube-proxy-${ARCH}:${KUBE_VERSION}
+${GCR_URL}/google-containers/etcd-${ARCH}:${ETCD_VERSION}
+${GCR_URL}/google-containers/pause-${ARCH}:${KUBE_PAUSE_VERSION}
+${GCR_URL}/google-containers/k8s-dns-sidecar-${ARCH}:${DNS_VERSION}
+${GCR_URL}/google-containers/k8s-dns-kube-dns-${ARCH}:${DNS_VERSION}
+${GCR_URL}/google-containers/k8s-dns-dnsmasq-nanny-${ARCH}:${DNS_VERSION}
+${GCR_URL}/google-containers/kubernetes-dashboard-${ARCH}:${DASHBOARD_VERSION}
+${GCR_URL}/google-containers/heapster-grafana-${ARCH}:${GRAFANA_VERSION}
+${GCR_URL}/google-containers/heapster-${ARCH}:${HEAPSTER_VERSION}
+${GCR_URL}/google-containers/heapster-influxdb-${ARCH}:${INFLUXDB_VERSION}
 ${GCR_URL}/google-containers/kube-addon-manager-${ARCH}:${ADDON_MGR_VERSION}
 ${GCR_URL}/google-containers/addon-resizer:${ADDON_RESIZER_VERSION}
 quay.io/coreos/flannel:v0.8.0-amd64
