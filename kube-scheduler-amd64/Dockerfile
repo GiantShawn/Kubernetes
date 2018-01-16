@@ -1,2 +1,2 @@
   FROM k8s.gcr.io/kube-scheduler-amd64:v1.8.5
-  MAINTAINER wulixuan <wulixuan@inspur.com>
+  MAINTAINER Shawn Li <shawn@shawnli.org>

@@ -39,11 +39,11 @@ do
   mkdir -p ${dir}
   cat <<EOF > ${dir}/Dockerfile
   FROM ${imageName}
-  MAINTAINER wulixuan <wulixuan@inspur.com>
+  MAINTAINER Shawn Li <shawn@shawnli.org>
 EOF
 done
 
 git add .
-git commit -m "add k8s heapster images..."
+git commit -m "add k8s images..."
 git push origin master
 
