@@ -40,9 +40,9 @@ quay.io/coreos/flannel:v0.8.0-amd64
 
 for imageName in ${image_list[@]}; 
 do
-        imageShortName=`echo ${imageName} | awk -F ":" '{print $1}'|awk -F "/" '{print $N}'`
-        imageShortName_ver=`echo ${imageName} | awk -F "/" '{print $N}'`
-        dir=`echo ${imageName} | awk -F ":" '{print $1}'|awk -F "/" '{print $N}'`
+        imageShortName=`echo ${imageName} | awk -F ":" '{print $1}'|awk -F "/" '{print $NF}'`
+        imageShortName_ver=`echo ${imageName} | awk -F "/" '{print $NF}'`
+        dir=`echo ${imageName} | awk -F ":" '{print $1}'|awk -F "/" '{print $NF;}'`
         mkdir -p ${dir}
         cat <<EOF > ${dir}/Dockerfile
 FROM ${imageName}
