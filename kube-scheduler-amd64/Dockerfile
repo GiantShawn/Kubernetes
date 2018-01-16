@@ -1,2 +1,2 @@
-  FROM k8s.gcr.io/kube-scheduler-amd64:v1.8.5
-  MAINTAINER Shawn Li <shawn@shawnli.org>
+FROM gcr.io/kube-scheduler-amd64:latest
+MAINTAINER Shawn Li <shawn@shawnli.org>

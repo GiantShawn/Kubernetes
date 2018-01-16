@@ -1,2 +1,2 @@
-  FROM k8s.gcr.io/heapster-amd64:v1.4.2
-  MAINTAINER Shawn Li <shawn@shawnli.org>
+FROM gcr.io/heapster-amd64:v1.5.0
+MAINTAINER Shawn Li <shawn@shawnli.org>
