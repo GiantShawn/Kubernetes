@@ -11,6 +11,7 @@ HEAPSTER_VERSION=v1.5.0
 INFLUXDB_VERSION=v1.3.3
 ADDON_MGR_VERSION=v6.5
 ADDON_RESIZER_VERSION=1.8.1
+KUBEADM_VERSION=latest
 
 
 ARCH=amd64
@@ -35,6 +36,7 @@ ${GCR_URL}/google-containers/heapster-${ARCH}:${HEAPSTER_VERSION}
 ${GCR_URL}/google-containers/heapster-influxdb-${ARCH}:${INFLUXDB_VERSION}
 ${GCR_URL}/google-containers/kube-addon-manager-${ARCH}:${ADDON_MGR_VERSION}
 ${GCR_URL}/google-containers/addon-resizer:${ADDON_RESIZER_VERSION}
+${GCR_URL}/google-containers/kubeadm-amd64:${KUBEADM_VERSION}
 quay.io/coreos/flannel:v0.8.0-amd64
 )
 
@@ -49,7 +51,7 @@ FROM ${imageName}
 MAINTAINER Shawn Li <shawn@shawnli.org>
 EOF
         echo docker pull registry.cn-shenzhen.aliyuncs.com/sigcrash/$imageShortName
-        echo docker tag registry.cn-shenzhen.aliyuncs.com/sigcrash/$imageShortName:latest $imageName
+        echo docker tag registry.cn-shenzhen.aliyuncs.com/sigcrash/$imageShortName:latest $(echo $imageName | sed -e "s/google-containers/google_containers/g" -) 
 done
 
 git add .
